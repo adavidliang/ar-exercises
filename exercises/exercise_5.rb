@@ -8,3 +8,11 @@ puts "Exercise 5"
 puts "----------"
 
 # Your code goes here ...
+
+pp sum = Store.sum {|store| store.annual_revenue}
+
+num_of_stores = Store.count
+
+pp average = sum/num_of_stores
+
+pp Store.select{|store| store.annual_revenue > 1000000}.count

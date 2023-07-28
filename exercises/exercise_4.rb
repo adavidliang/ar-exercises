@@ -13,14 +13,15 @@ Store.create(name: "Whistler", annual_revenue: 1900000, mens_apparel: true)
 
 Store.create(name: "Gastown", annual_revenue: 430000, mens_apparel: true, womens_apparel: true)
 
-pp @mens_stores = Store.where(mens_apparel: true)
+@mens_stores = Store.where(mens_apparel: true, womens_apparel: false)
 
-Store.select {|stores|
+
+@mens_stores.each {|stores|
 pp stores.name
 pp stores.annual_revenue
 }
 
-pp Store.select{|store| 
+Store.select{|store| 
 store.annual_revenue < 1000000 && store.womens_apparel == true
 }
 
