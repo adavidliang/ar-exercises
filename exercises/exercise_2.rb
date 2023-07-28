@@ -11,4 +11,4 @@ puts "----------"
 @store2 = Store.find(2)
 
 @store1.update(name: "Dylan")
-pp @store1
+pp @store1 
